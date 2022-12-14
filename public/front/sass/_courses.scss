@@ -1,0 +1,287 @@
+//  about start
+
+.about{
+    position: relative;
+    margin-bottom: 60px;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    padding: 70px 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.6);
+    }
+
+    &__cart{
+        position: relative;
+        z-index: 5;
+    }
+
+    &__menu{
+        display: flex;
+        align-items:center;
+        grid-gap: 15px;
+        margin-top: 15px;
+    }
+
+    &__menu__link{
+        @include fontAll(14px,400,$orig);
+        span{
+            margin-right: 5px;
+        }
+    }
+
+    .courses__title__h2{
+        margin: 0;
+        color:$title;
+    }
+}
+
+.courses_in{
+    padding: 0;
+    background-color:transparent;
+}
+
+//  about end
+
+
+// courses_in start
+
+.courses_in{
+    position: relative;
+    z-index: 5;
+    margin-bottom: 90px;
+
+    &__list{
+        display: flex;
+        align-items:flex-start;
+        flex-direction: column;
+        grid-gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    &__item{
+        display: flex;
+        align-items:flex-start;
+        grid-gap: 30px;
+    }
+
+    &__logo{
+        img{
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+    }
+
+    &__text{
+        @include fontAll(16px,400,$text);
+        line-height: 24px;
+        text-align: justify;
+        margin-top: 10px;
+    }
+
+    &__menu{
+        list-style: disc;
+        margin-left: 20px;
+    }
+
+    &__table__max{
+        overflow-x: scroll;
+    }
+
+    &__table{
+        width: 1160px;
+        tr{
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            grid-gap: 20px;
+        }
+
+        th{
+            padding: 20px;
+            background-color:$link;
+            width: 250px;
+            min-width: 270px;
+            display: flex;
+            align-items:flex-start;
+            @include fontAll(18px,400,$title);
+            line-height: 1.5;
+            text-align: initial;
+            height: 100%;
+            min-height: 90px;
+            align-items: center;
+        }
+
+        td{
+            width: 100%;
+            min-width: 270px;
+            min-height: 70px;
+            display: flex;
+            align-items:center;
+            @include fontAll(16px,400,$text);
+            line-height: 1.5;
+            justify-content: flex-start;
+            text-align: initial;
+            padding-right: 20px;
+        }
+    }
+
+    &__button__link{
+        padding: 20px 25px;
+        border-radius:6px;
+        -webkit-border-radius:6px;
+        -moz-border-radius:6px;
+        -ms-border-radius:6px;
+        -o-border-radius:6px;
+        background-color:$orig;
+        @include fontAll(14px,400,$title);
+        line-height: 100%;
+        text-transform: uppercase;
+        margin-top: 30px;
+    }
+
+    &__button{
+        display: flex;
+        justify-content: flex-end;
+        align-items:center;
+    }
+
+    &__SIGN_UP__form{
+        position: absolute;
+        z-index: 1000000000;
+        top: 50% !important;
+        left: 50% !important;
+        width: 100%;
+        min-width: 380px;
+        max-width: 380px;
+        height: auto;
+        background-color:$link;
+        padding: 0px 30px 20px 30px;
+        border-radius:6px;
+        -webkit-border-radius:6px;
+        -moz-border-radius:6px;
+        -ms-border-radius:6px;
+        -o-border-radius:6px;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+
+        iframe{
+            margin-top: 20px;
+        }
+    }
+
+    &__SIGN_UP{
+        display: none;
+        position: fixed;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+
+        form{
+            display: flex;
+            align-items:flex-end;
+            justify-content: center;
+            flex-direction: column;
+            outline: none;
+        }
+    }
+
+    .modal-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,83,132,.71);
+    }
+}
+
+.courses_in__table tr:nth-child(odd){
+    th{
+        background-color:#33b4ea;
+    }
+}
+
+.courses_in__table tr:nth-child(odd){
+    background: #f7f7f7;
+}
+
+
+.courses_in__table__max::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.courses_in__table__max::-webkit-scrollbar-track {
+    background: $link;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.courses_in__table__max::-webkit-scrollbar-thumb {
+    background: $orig;
+    height: 8px;
+    border-radius: 50px;
+}
+
+// courses_in end
+
+
+@media (max-width:650px){
+    .about{
+        padding: 50px 0;
+    }
+
+    .courses_in__item{
+        flex-direction: column;
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width:500px){
+    .courses_in__SIGN_UP__form {
+        min-width: 300px;
+        max-width: 300px;
+    }
+}
+
+
+@media (max-width:450px){
+    .courses_in__SIGN_UP__form {
+        min-width: 280px;
+        max-width: 28px;
+    }
+}
+
+
+@media (max-width:360px){
+    .courses_in__SIGN_UP__form {
+        min-width: 250px;
+        max-width: 25px;
+        padding: 10px 10px 20px 10px;
+    }
+}
